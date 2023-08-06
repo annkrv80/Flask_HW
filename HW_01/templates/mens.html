@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Мужская одежда</h1>
+    <p class="lead">Одежда для стильных мужчин</p>
+  </div>
+
+<div class="row">
     {% for item in mens_clothing %}
-    <div>
-        <h2>{{ item.name }}</h2>
-        <p>Размер: {{ item.size }}</p>
-        <p>Цена: {{ item.price }} руб</p>
-    </div>
+    <div class="col col col offset-1">
+        <div class="card" style="width: 18;">
+            <div class="card-body text-center">
+                <h2>{{ item.name }}</h2>
+                <p>Размер: {{ item.size }}</p>
+                <h4>Цена: {{ item.price }} руб</h4>
+            </div>
+        </div>
+</div>
     {% endfor %}
 {% endblock %}
