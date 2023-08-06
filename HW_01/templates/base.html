@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Магазин одежды для всей семьи</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <ul class="nav nav-pills justify-content-end aling-items-end">
+            <li class="nav-item"><a href="/man/" class="nav-link">Мужская одежда</a></li>
+            <li class="nav-item"><a href="/woman/" class="nav-link">Женская одежда</a></li>
+            <li class="nav-item"><a href="/kids/" class="nav-link">Детская одежда</a></li>          
+        </ul>
+        {% block content %}
+            <h1>Добро пожаловать в наш интернет магазин!</h1>
+        {% endblock %}
+        <div class="row fixed-bottom modal-footer">
+            <hr>
+            <p>Все права защищены &copy;</p>
+        </div>
+    </div>   
+</body>
+</html>

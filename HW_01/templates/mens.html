@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for item in mens_clothing %}
+    <div>
+        <h2>{{ item.name }}</h2>
+        <p>Размер: {{ item.size }}</p>
+        <p>Цена: {{ item.price }} руб</p>
+    </div>
+    {% endfor %}
+{% endblock %}
