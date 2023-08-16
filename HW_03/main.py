@@ -2,7 +2,7 @@
 #Форма должна содержать поля "Имя", "Фамилия", "Email", "Пароль" и кнопку "Зарегистрироваться". 
 #При отправке формы данные должны сохраняться в базе данных, а пароль должен быть зашифрован.
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, redirect
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
 from models import db, User
@@ -24,7 +24,7 @@ def init_db():
 
 @app.route('/')
 def index():
-    return 'Наш сайт'
+    return redirect(url_for('register'))
 
 
 pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$'
